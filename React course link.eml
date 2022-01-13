@@ -1,0 +1,80 @@
+Delivered-To: vu.millie@gmail.com
+Received: by 2002:a17:907:9906:0:0:0:0 with SMTP id ka6csp3121546ejc;
+        Tue, 11 Jan 2022 18:46:20 -0800 (PST)
+X-Received: by 2002:a05:6102:30a9:: with SMTP id y9mr253833vsd.68.1641955580165;
+        Tue, 11 Jan 2022 18:46:20 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1641955580; cv=none;
+        d=google.com; s=arc-20160816;
+        b=aZ9cVaciTvARdLeZYqCANBw8Okoba9VO0bbfdQkmYJ4EWhsZKNc8Q3mwVN5bhPZ8LC
+         0wspFExpiVPhSlipa+zXUT7xwXo6v3HSqChLa7t41VjdLLnV7MAYeSo2wtsVDUOwTP8U
+         szvj1mVmiHtHdbl3Q/cWtK0x1sCajIELYQHJWNGbFI/6DpblE5bEuEpFjCpzubxSRci4
+         3aFivkR+fEYteR+Y2b/3Tn1+k9vvX5a4uDHQmEF82Icy/uNHJ87faz4/AkBrtxltw/84
+         dinj65q3/DJ3n1iovuv1yH+tOxGSiEXY9uP0yHlJ1GPXWZIM+F6Bitq+U0c+Ihux4X+k
+         RnMw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=V//a3giRV6Md3ZHH+Ob06J7iStVlygZYad0Yq+r0mN0=;
+        b=u229a0WEla3YR1x4sCoiYhy9x3uJhYm40Ug0ruIcFgrHQIEdHI1xTzk6eL2npVFRdk
+         UcPQB2A5Bxft9O9C+4/1/+on81fElJiA8K28zkaXt76TqorvImfQYeeVHqArzgrImzz9
+         q/57j6zHEp0qSD038nCjwnsyz1Zo7K3a+LUy9uesN7xAbsADvsLMxi71Rjvxo29U6h5n
+         ApWRsCLdYIUfpo79mXTES8Uz/M+cBReRw1Puds/oVMZjYKfzkpceAbpt9zurv294yukL
+         KbRPh+3dEFdGfSThObi+gdtqBpgmQkUiE4fRPxsg81HmCibIvKIhBNk6LDyWPvpTO8UA
+         APXw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20210112 header.b=Fy68iVQN;
+       spf=pass (google.com: domain of anvu2292@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=anvu2292@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <anvu2292@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id z8sor825442vkn.56.2022.01.11.18.46.19
+        (Google Transport Security);
+        Tue, 11 Jan 2022 18:46:20 -0800 (PST)
+Received-SPF: pass (google.com: domain of anvu2292@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20210112 header.b=Fy68iVQN;
+       spf=pass (google.com: domain of anvu2292@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=anvu2292@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20210112;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=V//a3giRV6Md3ZHH+Ob06J7iStVlygZYad0Yq+r0mN0=;
+        b=Fy68iVQNF4uz8mw4Vyk0nIjxf0pIZp4S0ptLnzsQNddnerLWiY7ZE2R+NQHIZ36re8
+         v8KNfL3Iphhq0ggX/0MJUrbqwcnOwSrFx5EkHVPpbzkoeSE7685bdudUSE1dZ07KFiac
+         xpchR3skpo8EYiSemKR9RBk984fBKtCe9QyqJpMdtc1XkPvkZGemR8CajLccQ6z3wM6Q
+         P6WgldXG0cue14FcJgBBP74W0cRdUdZheoBYkZ46TRxmho5IwoX6zWA6EsBdwI2hRGTx
+         AFaEGrOKeCJQ6COxyu51MiwSrnKdzLT1oyic9fJ1OH5bEkNw13hHahz0aw5/ILMD0ZH0
+         pmSQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20210112;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=V//a3giRV6Md3ZHH+Ob06J7iStVlygZYad0Yq+r0mN0=;
+        b=XtltycYrc9jGR/df1CSJglzgUi5JnQohWuYa0hY6LUkDZ+KdqxpXe422gh3qzd8fQ7
+         STf0kilKmD2ExUGPpwhBCSb/8LB8dWx2Llac3x0UGRUMrphmFGAPtwyfH0voPWqfWDHa
+         /vntcXLpYpZ1dluSFfgYzIYNE5lZA5KWAEsQ6K4K7Hnzxu5NWXfO6WXQDibXdFrqJulj
+         ZHTFWCek/OF8CGRWdG2dMpynGuXMU7Zwhz9YfbOLBeU8BtdzKgP8lS1oytk3Wavby9df
+         8mrv9c+xGVYEACPNiwL+Gv3dVOXbhVKFbtbxgnVTP6K8wfxKdpoFE/nBxJOkE4OSgb9A
+         6Zfg==
+X-Gm-Message-State: AOAM530j6jCMvuiN9GNL3zuNuy89nj9A6fU2QKGJTQK2F38IlzsguWEH
+	ymqXXpxYCcpNIMd3dcA6Trv1cb5I/RLur5NCrdme5Dzu
+X-Google-Smtp-Source: ABdhPJzpMNpF6JwCbUAca52YL8AG4e78Eh3jXx9Y+ru/0MkTBekoyo33T6zPoGCRPE4iFFFLVoZqLyMObTl9+Ilr/gI=
+X-Received: by 2002:a05:6122:d9b:: with SMTP id bc27mr3865728vkb.14.1641955579574;
+ Tue, 11 Jan 2022 18:46:19 -0800 (PST)
+MIME-Version: 1.0
+From: Millie Vu <anvu2292@gmail.com>
+Date: Tue, 11 Jan 2022 18:46:09 -0800
+Message-ID: <CAFOOBMPhCdVJJMTmh4TdcSYi=ni5r7Dpc7qRisnfcH25kgoqHQ@mail.gmail.com>
+Subject: React course link
+To: "kush1223@gmail.com" <kush1223@gmail.com>, "vu.millie@gmail.com" <vu.millie@gmail.com>
+Content-Type: multipart/alternative; boundary="0000000000000ebf9605d559935f"
+
+--0000000000000ebf9605d559935f
+Content-Type: text/plain; charset="UTF-8"
+
+https://reactjs.org/tutorial/tutorial.html
+
+--0000000000000ebf9605d559935f
+Content-Type: text/html; charset="UTF-8"
+
+<div><a href="https://reactjs.org/tutorial/tutorial.html">https://reactjs.org/tutorial/tutorial.html</a></div>
+
+--0000000000000ebf9605d559935f--
